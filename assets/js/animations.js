@@ -1,48 +1,43 @@
 $(function () {
   $("#navigation button").stop().animate({ marginLeft: "-40px" }, 1000);
 
-  $("#navigation > .li1").hover(
+  $("#facial").hover(
     function () {
       $(".opcion1").fadeOut("fast", function () {
         $(this).attr("src", "./assets/images/lente.png").fadeIn("fast");
       });
-      $("button", $(this)).stop().animate({ marginLeft: "+25px" }, 500);
     },
     function () {
       $(".opcion1").fadeOut("fast", function () {
         $(this).attr("src", "./assets/images/lente1.png").fadeIn("fast");
       });
-      $("button", $(this)).stop().animate({ marginLeft: "-40px" }, 500);
     }
   );
 
-  $("#navigation > .li2").hover(
+  $("#gestual").hover(
     function () {
       $(".opcion2").fadeOut("fast", function () {
         $(this).attr("src", "../assets/images/victory1.png").fadeIn("fast");
       });
-      $("button", $(this)).stop().animate({ marginLeft: "+25px" }, 500);
     },
     function () {
       $(".opcion2").fadeOut("fast", function () {
         $(this).attr("src", "../assets/images/victory.png").fadeIn("fast");
       });
-      $("button", $(this)).stop().animate({ marginLeft: "-40px" }, 500);
     }
   );
 
-  $("#navigation > .li3").hover(
+  $("#code").hover(
     function () {
       $(".github").fadeOut("fast", function () {
         $(this).attr("src", "./assets/images/GitHub_logo1.png").fadeIn("fast");
       });
-      $("button", $(this)).stop().animate({ marginLeft: "+25px" }, 500);
     },
     function () {
       $(".github").fadeOut("fast", function () {
         $(this).attr("src", "../assets/images/GitHub_logo.png").fadeIn("fast");
       });
-      $("button", $(this)).stop().animate({ marginLeft: "-40px" }, 500);
+      
     }
   );
 });
@@ -54,9 +49,15 @@ $("#facial").click(function () {
 
     $(`<div class="spinner"></div>
     
+    <video id="video" autoplay muted>
+    </video>
     <br>
-    <p class="p">Reconocedor Facial</p>`)
+    <p class="p">Reconocedor Facial<br>
+    Espere unos momentos, hasta que la cámara pueda reconocer su rostro.</p>`)
     .appendTo("aside");
+
+    $(`<script src="./assets/js/main.js"></script>`)
+    .appendTo("body");
   });
   
 });
@@ -69,7 +70,8 @@ $("#gestual").click(function () {
 
     $(`<div class="spinner"></div>
     <br>
-    <p class="p">Reconocedor de Señas</p>`)
+    <p class="p">Reconocedor de Señas<br>
+                Espere unos momentos, hasta que la cámara pueda reconocer sus manos.</p>`)
     .appendTo("aside");
   });
  
@@ -77,6 +79,6 @@ $("#gestual").click(function () {
 
 $("#code").click(function () { 
   
-  window.open("https://www.github.com/");
+  window.open("https://github.com/tonythebrother/recognixe");
   
 });
