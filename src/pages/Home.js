@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -6,6 +6,12 @@ function Home() {
   return (
     <>
       <header>
+        <div className="logo-container">
+          <Link className="home" to="/">
+            <img src="./favicon.png" alt="Recognixe logo" />
+            <span>Recognixe</span>
+          </Link>
+        </div>
         <nav>
           <ul>
             <li className="welcome">¡Bienvenidos!</li>
@@ -17,22 +23,24 @@ function Home() {
         <section>
           <ul id="navigation">
             <br />
-            <li class="li1">
+            <li className="li1">
               <button id="facial">
-                <img
-                  class="opcion1"
-                  src="./assets/images/lente1.png"
-                  alt=""
-                  height="60px"
-                />
+                <Link to="/facial">
+                  <img
+                    className="opcion1"
+                    src="./assets/images/lente1.png"
+                    alt="Lente de camara"
+                    height="60px"
+                  />
+                </Link>
               </button>
             </li>
             <br />
-            <li class="li2">
+            <li className="li2">
               <button id="gestual">
                 <Link to="/recognixe">
                   <img
-                    class="opcion2"
+                    className="opcion2"
                     src="./assets/images/victory.png"
                     alt=""
                     height="60px"
@@ -44,14 +52,19 @@ function Home() {
             <br />
             <br />
             <br />
-            <li class="li3">
+            <li className="li3">
               <button id="code">
-                <img
-                  class="github"
-                  src="./assets/images/GitHub_logo.png"
-                  alt=""
-                  height="60px"
-                />
+                <a
+                  href="https://github.com/tonythebrother/recognixe"
+                  alt="Github recognixe"
+                >
+                  <img
+                    className="github"
+                    src="./assets/images/GitHub_logo.png"
+                    alt=""
+                    height="60px"
+                  />
+                </a>
               </button>
             </li>
           </ul>
@@ -85,8 +98,3 @@ function Home() {
 }
 
 export default Home;
-
-//<a class="home" href="/">
-//                        <img src="./favicon.png" alt="" height="20px">
-//                      Recognixe
-//                </a>
