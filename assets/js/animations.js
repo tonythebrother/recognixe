@@ -14,15 +14,15 @@ $(function () {
     }
   );
 
-  $("#gestual").hover(
+  $("#profile").hover(
     function () {
       $(".opcion2").fadeOut("fast", function () {
-        $(this).attr("src", "../assets/images/victory1.png").fadeIn("fast");
+        $(this).attr("src", "../assets/images/1014201915_HDR.jpg").fadeIn("fast");
       });
     },
     function () {
       $(".opcion2").fadeOut("fast", function () {
-        $(this).attr("src", "../assets/images/victory.png").fadeIn("fast");
+        $(this).attr("src", "../assets/images/0914202214_HDR.jpg").fadeIn("fast");
       });
     }
   );
@@ -62,18 +62,9 @@ $("#facial").click(function () {
   
 });
 
-$("#gestual").click(function () { 
+$("#profile").click(function () { 
   
-  $("aside").children().fadeOut("fast", function () {
-    
-    $("aside").empty();
-
-    $(`<div class="spinner"></div>
-    <br>
-    <p class="p">Reconocedor de Señas<br>
-                Espere unos momentos, hasta que la cámara pueda reconocer sus manos.</p>`)
-    .appendTo("aside");
-  });
+  window.open("https://github.com/tonythebrother");
  
 });
 
